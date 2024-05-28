@@ -2,7 +2,7 @@
 
 ## データの入手方法
 Stanford large network datasetの中のego-Facebookを使用。
-https://snap.stanford.edu/data/ego-Facebook.html から取得する。  
+https://snap.stanford.edu/data/ego-Facebook.html から取得する。
 特に、ego-Facebookの0.edgesを使用した。
 
 ## 参考
