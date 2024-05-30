@@ -1,7 +1,8 @@
 import heapq
 
+
 def dijkstra(G: list[list[tuple[int, int] | int]], src: int, PQ: bool = True) -> tuple[list[int], list[int]]:
-    """__description__
+    """ダイクストラ法による単一始点最短経路探索
 
     Args:
         G (list[list[tuple[int, int] | int]]): 隣接リスト表現のグラフ(重み付き) or 隣接行列
@@ -9,7 +10,7 @@ def dijkstra(G: list[list[tuple[int, int] | int]], src: int, PQ: bool = True) ->
         PQ (bool optional): 優先度付きキューを使うかどうか
 
     Returns:
-        tuple[list[int], list[int]}: (距離のリスト, 経路復元に使うリスト)
+        tuple[list[int], list[int]]: (距離のリスト, 経路復元に使うリスト)
     """
     INF = 10**18
     visited = [False]*len(G)

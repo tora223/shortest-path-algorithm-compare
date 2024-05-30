@@ -3,15 +3,14 @@ from collections import defaultdict
 
 
 def spfa(G: list[list[tuple[int, int]]], src: int) -> tuple[list[int], list[int]]:
-    """__description__
+    """SPFAによる単一始点最短経路探索
 
     Args:
         G (list[list[tuple[int, int]]]): 隣接リスト表現のグラフ
         src (int): 始点となるノードのインデックス
 
     Returns:
-        list[int]: 距離のリスト
-        list[int]: 経路復元に使うリスト
+        tuple[list[int], list[int]]: (距離のリスト, 経路復元に使うリスト)
     """
     INF = 10**18
     dist = [INF]*len(G)

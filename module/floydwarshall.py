@@ -1,5 +1,5 @@
 def floyd_warshall(G: list[list[int]]) -> tuple[list[list[int]], list[list[int]]]:
-    """__description__
+    """ワーシャルフロイド法による全対最短経路探索
 
     Args:
         G (list[list[int]]): 隣接行列表現のグラフ

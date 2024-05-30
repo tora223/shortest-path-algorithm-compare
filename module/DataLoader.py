@@ -1,5 +1,6 @@
-import pandas as pd
 import csv
+import pandas as pd
+
 
 class DataLoader:
     def __init__(self, filepath: str):
@@ -24,12 +25,14 @@ class DataLoader:
         self.edges = len(data)
         self.nodes = (max_id - min_id + 1) if not min_id == max_id else 0
 
+
     def get_graph_list(self) -> list[list[int]]:
         G = [[] for _ in range(self._max_id + 1)]
         for a, b in self._data:
             G[a].append(b)
         
         return G
+    
     
     def get_graph_with_weight(self) -> list[list[tuple[int, int]]]:
         G = [[] for _ in range(self._max_id + 1)]
@@ -38,12 +41,14 @@ class DataLoader:
         
         return G
     
+    
     def get_graph_bellman_ford(self) -> list[tuple[int, int, int]]:
         G = []
         for a, b in self._data:
             G.append((a, b, 1))
         
         return G
+    
     
     def get_graph_matrix(self) -> list[list[int]]:
         G = [[0]*(self._max_id + 1) for _ in range(self._max_id + 1)]
