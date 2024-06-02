@@ -18,10 +18,10 @@ def spfa(G: list[list[tuple[int, int]]], src: int) -> tuple[list[int], list[int]
     prev = [-1]*len(G)
     q = deque([src])
     in_queue = [False]*len(G)
-    in_queue[src] = 1
+    in_queue[src] = True
     while q:
         u = q.popleft()
-        d[u] = False
+        in_queue[u] = False
         for v, w in G[u]:
             if dist[v] > dist[u] + w:
                 dist[v] = dist[u] + w
